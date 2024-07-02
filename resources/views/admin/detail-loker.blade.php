@@ -55,8 +55,8 @@
                                     @foreach ($lamaran_seleksi as $item)
                                         <tr>
                                             <td>{{ $item->user->name }}</td>
-                                            <td>{{ $item->user->biodata->jenis_kelamin }}</td>
-                                            <td>{{ $item->user->biodata->pendidikan_terakhir }}</td>
+                                            <td>{{ $item->user->biodata != null && $item->user->biodata->jenis_kelamin != null ? $item->user->biodata->jenis_kelamin : '-' }}</td>
+                                            <td>{{ $item->user->biodata != null && $item->user->biodata->pendidikan_terakhir != null ? $item->user->biodata->pendidikan_terakhir : '-' }}</td>
                                             <td class="text-center">
                                                 <a href="/admin/detail-pelamar/{{ $item->user->id }}" class="btn btn-primary btn-sm me-2">Detail Profile</a>
                                                 <button class="btn btn-warning btn-sm" data-bs-toggle="modal"
@@ -133,8 +133,8 @@
                                     @foreach ($lamaran_wawancara as $item)
                                         <tr>
                                             <td>{{ $item->user->name }}</td>
-                                            <td>{{ $item->user->biodata->jenis_kelamin }}</td>
-                                            <td>{{ $item->user->biodata->pendidikan_terakhir }}</td>
+                                            <td>{{ $item->user->biodata != null && $item->user->biodata->jenis_kelamin != null ? $item->user->biodata->jenis_kelamin : '-' }}</td>
+                                            <td>{{ $item->user->biodata != null && $item->user->biodata->pendidikan_terakhir != null ? $item->user->biodata->pendidikan_terakhir : '-' }}</td>
                                             <td class="text-center">
                                                 <a href="/admin/detail-pelamar/{{ $item->user->id }}" class="btn btn-primary btn-sm me-2">Detail Profile</a>
                                                 <button class="btn btn-warning btn-sm" data-bs-toggle="modal"
@@ -211,8 +211,8 @@
                                     @foreach ($lamaran_diterima as $item)
                                         <tr>
                                             <td>{{ $item->user->name }}</td>
-                                            <td>{{ $item->user->biodata->jenis_kelamin }}</td>
-                                            <td>{{ $item->user->biodata->pendidikan_terakhir }}</td>
+                                            <td>{{ $item->user->biodata != null && $item->user->biodata->jenis_kelamin != null ? $item->user->biodata->jenis_kelamin : '-' }}</td>
+                                            <td>{{ $item->user->biodata != null && $item->user->biodata->pendidikan_terakhir != null ? $item->user->biodata->pendidikan_terakhir : '-' }}</td>
                                             <td class="text-center">
                                                 <a href="/admin/detail-pelamar/{{ $item->user->id }}" class="btn btn-primary btn-sm me-2">Detail Profile</a>
                                             </td>
